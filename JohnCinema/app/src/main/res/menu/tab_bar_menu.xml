@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Home"
+        android:icon="@drawable/baseline_movie_24"
+        android:id="@+id/home_tab_bar"
+        />
+    <item android:title="Reward"
+        android:icon="@drawable/baseline_card_giftcard_24"
+        android:id="@+id/reward_tab_bar"/>
+    <item android:title="Account"
+        android:icon="@drawable/baseline_account_circle_24"
+        android:id="@+id/account_tab_bar"/>
+    <item android:title="Admin"
+        android:icon="@drawable/baseline_smart_toy_24"
+        android:id="@+id/admin_tab_bar"/>
+
+</menu>

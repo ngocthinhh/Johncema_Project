@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.ScheduleActivity">
+
+    <LinearLayout
+        android:id="@+id/layoutTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/frameLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textViewBack"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:paddingBottom="10dp"
+            android:drawableLeft="@drawable/back_arrow_icon"
+            android:textSize="25dp"
+            android:textColor="@color/green"
+            />
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginRight="25dp"
+            android:gravity="center"
+            android:text="Suất chiếu"
+            android:textSize="25dp"
+            android:textColor="@color/green"
+            />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutTop"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewTitlePoster"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginBottom="10dp"
+                android:textSize="20dp"
+                android:textColor="@color/green"
+                android:text="Title"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right|center"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    app:cardCornerRadius="10dp">-->
+<!--                    <Spinner-->
+<!--                        android:id="@+id/spinnerCity"-->
+<!--                        android:layout_width="180dp"-->
+<!--                        android:layout_height="50dp"-->
+<!--                        />-->
+<!--                </androidx.cardview.widget.CardView>-->
+
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="15dp"
+                        android:text="Đạo diễn"/>
+                   <TextView
+                       android:id="@+id/textViewDirectorName"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:textSize="15dp"
+                       android:text="Phan Ngoc"></TextView>
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    app:cardCornerRadius="10dp">
+                    <Spinner
+                        android:id="@+id/spinnerTheater"
+                        android:layout_width="180dp"
+                        android:layout_height="50dp"
+                        />
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/green"
+                        android:layout_marginHorizontal="10dp"
+                        app:cardCornerRadius="5dp">
+                        <LinearLayout
+                            android:id="@+id/layout1"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+                            <TextView
+                                android:id="@+id/textViewWeek1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white"
+                                android:textSize="15dp"
+                                android:text="Hôm nay"/>
+                            <TextView
+                                android:id="@+id/textViewDay1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white"
+                                android:textSize="15dp"
+                                android:text="29/7"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        app:cardCornerRadius="5dp">
+                        <LinearLayout
+                            android:id="@+id/layout2"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+                            <TextView
+                                android:id="@+id/textViewWeek2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="15dp"
+                                android:text="Chủ nhật"/>
+                            <TextView
+                                android:id="@+id/textViewDay2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="15dp"
+                                android:text="30/7"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        app:cardCornerRadius="5dp">
+                        <LinearLayout
+                            android:id="@+id/layout3"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+                            <TextView
+                                android:id="@+id/textViewWeek3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="15dp"
+                                android:text="Chủ nhật"/>
+                            <TextView
+                                android:id="@+id/textViewDay3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="15dp"
+                                android:text="30/7"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        app:cardCornerRadius="5dp">
+                        <LinearLayout
+                            android:id="@+id/layout4"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+                            <TextView
+                                android:id="@+id/textViewWeek4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="15dp"
+                                android:text="Chủ nhật"/>
+                            <TextView
+                                android:id="@+id/textViewDay4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="15dp"
+                                android:text="30/7"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        app:cardCornerRadius="5dp">
+                        <LinearLayout
+                            android:id="@+id/layout5"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+                            <TextView
+                                android:id="@+id/textViewWeek5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="15dp"
+                                android:text="Chủ nhật"/>
+                            <TextView
+                                android:id="@+id/textViewDay5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="15dp"
+                                android:text="30/7"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        app:cardCornerRadius="5dp">
+                        <LinearLayout
+                            android:id="@+id/layout6"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+                            <TextView
+                                android:id="@+id/textViewWeek6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="15dp"
+                                android:text="Chủ nhật"/>
+                            <TextView
+                                android:id="@+id/textViewDay6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="15dp"
+                                android:text="30/7"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        app:cardCornerRadius="5dp">
+                        <LinearLayout
+                            android:id="@+id/layout7"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+                            <TextView
+                                android:id="@+id/textViewWeek7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="15dp"
+                                android:text="Chủ nhật"/>
+                            <TextView
+                                android:id="@+id/textViewDay7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="15dp"
+                                android:text="30/7"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/softGray"/>
+
+            <GridView
+                android:layout_marginTop="10dp"
+                android:id="@+id/gridViewHour"
+                android:layout_width="match_parent"
+                android:layout_height="550dp"
+                android:numColumns="5"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
